@@ -22,7 +22,7 @@ class SafeCodableTests: XCTestCase {
     func testDefaultValue() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-		let rawString = "{\"name\": \"Dave\", \"age\": 18}"
+		let rawString = "{\"name\": null, \"age\": 18}"
 		if let data = rawString.data(using: .utf8) {
 			do {
 				let user = try JSONDecoder().decode(User.self, from: data)
